@@ -18,10 +18,10 @@
   <!-- nav -->
   <ul class="nav nav-header justify-content-center">
     <li class="nav-item header-nav-item">
-      <a class="nav-link" href="#portfolio">Portfolio</a>
+      <a class="nav-link nav-link-top" href="#portfolio">Portfolio</a>
     </li>
     <li class="nav-item header-nav-item">
-      <a class="nav-link" id="#about">About</a>
+      <a class="nav-link nav-link-top" href="#about">About</a>
     </li>
   </ul>
 </header>
@@ -35,16 +35,16 @@
     <hr />
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link" href="mailto: michellersokolov@gmail.com"
+        <a class="nav-link nav-link-bottom" href="mailto: michellersokolov@gmail.com"
           >michellersokolov@gmail.com
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="tel:+18186870704">(818)-687-0704</a>
+        <a class="nav-link nav-link-bottom" href="tel:+18186870704">(818)-687-0704</a>
       </li>
       <li class="nav-item">
         <a
-          class="nav-link"
+          class="nav-link nav-link-bottom"
           target="_blank"
           href="https://docs.google.com/document/d/1-QXX4BJ-E07hfGO4fMTNOKnu9HWXFWsB-3-hNx039ho/edit?usp=sharing"
           >Resume</a
@@ -52,7 +52,7 @@
       </li>
       <li class="nav-item">
         <a
-          class="nav-link"
+          class="nav-link nav-link-bottom"
           target="_blank"
           href="https://github.com/michelle-sokolov"
           >GitHub</a
@@ -60,7 +60,7 @@
       </li>
       <li class="nav-item">
         <a
-          class="nav-link"
+          class="nav-link nav-link-bottom"
           target="_blank"
           href="https://www.linkedin.com/in/michelle-sokolov-5a5a30a8/"
           >LinkedIn</a
@@ -80,17 +80,16 @@
         class="portfolio-div"
         style="background-image: url(https://imgur.com/TpHOqBa.jpg)"
       ></div>
-      <ul class="portfolio-link">
+      <ul class="portfolio-link-ul">
         <li>Custom Wordpress Theme</li>
         <li>Advanced Custom Fields plugin</li>
         <li>Responsive</li>
+        <li>      
+          <a href="https://coterieseniorliving.com" class="portfolio-link" target="_blank">
+            <u>view deployed website</u>
+          </a>
+        </li>
       </ul>
-      <a
-        href="https://coterieseniorliving.com"
-        class="portfolio-link"
-        target="_blank"
-        ><u>view deployed website</u></a
-      >
     </div>
     <div class="col">
       <h3 class="text-center">Atria Senior Living</h3>
@@ -98,14 +97,16 @@
         class="portfolio-div"
         style="background-image: url(https://imgur.com/uiJsbLt.jpg)"
       ></div>
-      <ul class="portfolio-link">
+      <ul class="portfolio-link-ul">
         <li>Headless Wordpress used with Vue</li>
         <li>Advanced Custom Fields plugin</li>
         <li>Responsive</li>
+        <li>
+          <a href="atriaseniorliving.com" class="portfolio-link" target="_blank">
+            <u>view deployed website</u>
+          </a>
+        </li>
       </ul>
-      <a href="atriaseniorliving.com" class="portfolio-link" target="_blank"
-        ><u>view deployed website</u></a
-      >
     </div>
     <div class="col">
       <h3 class="text-center">Weather App</h3>
@@ -115,16 +116,15 @@
           background-image: url(https://media.giphy.com/media/js5UsZfWCGfJzELpxo/giphy.gif);
         "
       ></div>
-      <ul class="portfolio-link">
+      <ul class="portfolio-link-ul">
         <li>HTML, CSS, JavaScript</li>
         <li>Axios calls</li>
+        <li>
+          <a href="https://michelle-sokolov.github.io/weatherApp/" class="portfolio-link" target="_blank">
+            <u>view deployed application</u>
+          </a>
+        </li>
       </ul>
-      <a
-        href="https://michelle-sokolov.github.io/weatherApp/"
-        class="portfolio-link"
-        target="_blank"
-        ><u>view deployed application</u></a
-      >
     </div>
   </div>
 </div>
@@ -143,7 +143,7 @@
         I am skilled in HTML, CSS, SASS, SCSS, JavaScript, TypeScript, Node.js,
         and databases (MongoDB and MySQL). I have worked with some of the most
         popular frameworks like Angular, Vue, React, Bootstrap, Ionic, and
-        Express. <a style="color: white" target="_blank" href="https://courses.edx.org/certificates/64183cd672b1410d9e98768e8fb2d1b6">I am certified in Web Accessibilty</a>.
+        Express. <a class="ax-link" target="_blank" href="https://courses.edx.org/certificates/64183cd672b1410d9e98768e8fb2d1b6">I am certified in Web Accessibilty</a>.
       </div>
     </div>
   </div>
@@ -160,11 +160,14 @@
     border-radius: 5px;
     background-size: cover;
   }
+  .portfolio-link-ul {
+    padding-top: 10px;
+    font-size: 20px;
+  }
   .portfolio-link {
     padding-top: 8px;
     font-size: 20px;
     list-style-type: none;
-    padding-left: 0;
     color: black;
   }
   a.portfolio-link:hover {
@@ -179,7 +182,7 @@
     color: white;
   }
   footer {
-    height: 100px;
+    height: 150px;
     background: #253d5b;
   }
   .nav-header {
@@ -189,12 +192,17 @@
   .header-nav-item {
     margin: auto 0;
   }
-  .nav-link {
+  .nav-link-top, .nav-link-bottom {
     color: white;
     font-size: 20px;
   }
-  .nav-link:hover {
+  .nav-link-top:hover {
     text-decoration: underline;
+    color: #67697c;
+  }
+  .nav-link-bottom:hover {
+    text-decoration: underline;
+    color: #253d5b;
   }
   .intro {
     background: #67697c;
@@ -209,5 +217,14 @@
   }
   h3 {
     margin-top: 16px;
+  }
+  .col-5 {
+    font-size: 20px;
+  }
+  a.ax-link {
+    color: white;
+  }
+  a.ax-link:hover {
+    color: #253d5b;
   }
 </style>
